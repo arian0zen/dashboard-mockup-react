@@ -9,6 +9,7 @@ const AppContent = () => {
     <div className="h-full">
       {" "}
       <Routes>
+        <Route path="/" element={<Navigate to={"/home"} replace />} />
         {routes.map((route, idx) => {
           return (
             route.element && (
