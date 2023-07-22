@@ -8,7 +8,7 @@ type Props = {};
 
 const StrategyComponent = (props: Props) => {
   return (
-    <div className="px-4 py-4 bg-gray-100 text-gray-800 flex flex-col gap-8 w-full mx-auto sm:w-[30vh] h-fit rounded-3xl sm:rounded-lg sm:mt-12 mb-[80px] mt-8">
+    <div className="px-4 py-4 bg-gray-50 text-gray-800 flex flex-col gap-8 w-full mx-auto sm:w-[30vh] h-fit rounded-3xl sm:rounded-lg sm:mt-12 mb-[80px] mt-16">
       <div className="px-4 profile flex flex-col justify-center gap-2 rounded-md">
         <h1 className="font-semibold font-sans mb-4">Retirement Strategy</h1>
         <div className="slider1 flex flex-col">

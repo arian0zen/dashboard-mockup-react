@@ -22,10 +22,10 @@ let recentTransactions = [
 
 const ProfileComponent = (props: Props) => {
   return (
-    <div className="px-6 sm:px-14 py-12 sm:bg-gray-100 bg-white text-gray-800 flex flex-col gap-8 w-screen sm:w-auto">
+    <div className="px-6 sm:px-8 md:px-10 py-12 sm:bg-gray-100 bg-white text-gray-800 flex flex-col gap-8 w-screen sm:w-auto">
       <div className="px-4 profile flex flex-col justify-center gap-2 rounded-md">
         <div className="relative block sm:hidden ml-auto">
-          <span className="absolute rounded-full h-3 w-3 bg-blue-500 border-2 border-white -top-2 -right-1"></span>
+          <span className="absolute rounded-full h-3 w-3 bg-blue-500 border-2 border-white top-2 -right-1"></span>
           <BsBell size={18} />
         </div>
         <div className="profile-section flex items-center gap-4">
