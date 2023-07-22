@@ -6,7 +6,7 @@ const AppContent = () => {
   const [searchParams] = useSearchParams();
 
   return (
-    <div className="h-full">
+    <div className="h-full w-full">
       {" "}
       <Routes>
         <Route path="/" element={<Navigate to={"/home"} replace />} />

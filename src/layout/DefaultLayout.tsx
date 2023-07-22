@@ -6,7 +6,7 @@ const DefaultLayout = () => {
   //   const [isOpen, setIsOpen] = useState(false);
   let navigate = useNavigate();
   return (
-    <div className="flex flex-row h-screen w-full overflow-hidden">
+    <div className="flex flex-row w-full">
       <div>
         <Sidebar />
       </div>
