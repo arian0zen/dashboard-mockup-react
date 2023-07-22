@@ -26,6 +26,11 @@ const routes = [
     element: HomePage
   },
   {
+    path: "/search",
+    name: "Search",
+    element: HomePage
+  },
+  {
     path: "/account",
     name: "Account",
     element: HomePage
