@@ -60,7 +60,7 @@ const RetirementIncomeComponent = (props: Props) => {
           These numbers represents current goal achievements
         </p>
         <div className="inputs-donut flex items-center justify-between mt-8 gap-4 sm:gap-2 flex-col sm:flex-row w-full">
-          <div className="inputs flex flex-row sm:flex-col gap-2 w-full sm:w-fit">
+          <div className="inputs flex flex-row sm:flex-col gap-2 w-full sm:w-fit justify-center">
             <div
               className="input1 flex gap-2 cursor-pointer relative"
               onClick={() => {
