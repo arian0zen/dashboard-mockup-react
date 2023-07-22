@@ -109,17 +109,17 @@ const StackedBarChart: React.FC = () => {
       </p>
       <div className="legends mb-2 flex flex-wrap gap-2 items-between justify-between ">
         <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
-          <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
+          <div className="w-3 h-2 bg-[#043087] rounded-full"></div>
           <p className="text-xs text-gray-500 font-semibold">Employer</p>
           <p className="tracking-wide text-xs font-bold">K 73,500</p>
         </div>
         <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
-          <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
+          <div className="w-3 h-2 bg-[#195de6] rounded-full"></div>
           <p className="text-xs text-gray-500 font-semibold">Employee</p>
           <p className="tracking-wide text-xs font-bold">K 23,480</p>
         </div>
         <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
-          <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
+          <div className="w-3 h-2 bg-[#6698fa] rounded-full"></div>
           <p className="text-xs text-gray-500 font-semibold">Interest</p>
           <p className="tracking-wide text-xs font-bold">$ 4,000</p>
         </div>
