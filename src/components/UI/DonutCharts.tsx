@@ -30,7 +30,8 @@ const DonutChart = ({ changed }: DonutProps) => {
   const chartStyle = {
     width: "100px", // Adjust the size of the donut chart as needed
     height: "100px",
-    zIndex: 1000,
+    zIndex: 100,
+    
   };
   const data1 = {
     labels: ["Them", "Me"],
@@ -80,6 +81,9 @@ const DonutChart = ({ changed }: DonutProps) => {
               legend: {
                 display: false, // Hide the legend and labels
               },
+              tooltip: {
+                enabled: false,
+              }
             }, // Adjust the cutout value to control the size of the donut
           }}
         />
@@ -94,12 +98,17 @@ const DonutChart = ({ changed }: DonutProps) => {
       <div style={chartStyle} className="relative">
         <Doughnut
           data={data2}
+
           options={{
+            
             cutout: "70%",
             plugins: {
               legend: {
                 display: false, // Hide the legend and labels
               },
+              tooltip: {
+                enabled: false,
+              }
             }, // Adjust the cutout value to control the size of the donut
           }}
         />
@@ -119,13 +128,16 @@ const DonutChart = ({ changed }: DonutProps) => {
               legend: {
                 display: false, // Hide the legend and labels
               },
+              tooltip: {
+                enabled: false,
+              }
             }, // Adjust the cutout value to control the size of the donut
           }}
         />
         <p className="text-center font-semibold text-xs text-gray-500 mt-4">
           Me
         </p>
-        <span className="absolute text-2xl font-semibold top-9 left-7 text-gray-600">
+        <span className="z-10 absolute text-2xl font-semibold top-9 left-7 text-gray-600">
           {meData[0]}%
         </span>{" "}
       </div>

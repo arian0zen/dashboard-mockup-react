@@ -34,8 +34,8 @@ const RetirementIncomeComponent = (props: Props) => {
         <p className="text-xl font-semibold font-sans mb-8">
           Starting Year 2056
         </p>
-        <div className="flex gap-4 sm:gap-20">
-          <div className="w-full sm:w-fit flex flex-col border-b border-indigo-600">
+        <div className="flex gap-4 sm:gap-20 flex-wrap">
+          <div className="w-full sm:w-fit flex flex-col border-b border-indigo-600 pb-3">
             <p className="text-2xl font-semibold font-sans">$300,000</p>
             <p className="text-xs text-gray-400 font-medium">My Goal</p>
           </div>
