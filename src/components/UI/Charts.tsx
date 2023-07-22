@@ -5,12 +5,13 @@ import { Line, Bar, Doughnut, Pie, PolarArea, Scatter } from "react-chartjs-2";
 ChartJS.register(...registerables);
 
 const StackedBarChart: React.FC = () => {
+  const isSmallScreen = window.innerWidth <= 768;
   const data = {
     labels: [20, "", 30, "", 40, "", 50, "", 60, ""],
     datasets: [
       {
         label: "Employer",
-        data: [5, 10, 20, 12, 30, 40, 20, 20, 25, 20],
+        data: isSmallScreen ? [70, 100, 23, 60] :[5, 10, 20, 12, 30, 40, 20, 20, 25, 20],
         backgroundColor: [
           "#043087",
           "#043087",
@@ -26,7 +27,7 @@ const StackedBarChart: React.FC = () => {
       },
       {
         label: "Employee",
-        data: [15, 10, 5, 30, 15, 20, 10, 35, 14, 55],
+        data: isSmallScreen ? [40, 80, 63, 100] :[15, 10, 5, 30, 15, 20, 10, 35, 14, 55],
         backgroundColor: [
           "#195de6",
           "#195de6",
@@ -42,7 +43,7 @@ const StackedBarChart: React.FC = () => {
       },
       {
         label: "Interest",
-        data: [5, 10, 15, 10, 20, 25, 20, 15, 50, 40],
+        data: isSmallScreen ? [41, 60, 53, 90] :[5, 10, 15, 10, 20, 25, 20, 15, 50, 40],
         backgroundColor: [
           "#6698fa",
           "#6698fa",
@@ -59,7 +60,7 @@ const StackedBarChart: React.FC = () => {
     ],
   };
 
-  const isSmallScreen = window.innerWidth <= 768; // Set the breakpoint for smaller screens
+  // Set the breakpoint for smaller screens
   const visibleLabels = isSmallScreen
     ? [20, 30, 40, 50]
     : [20, "", 30, "", 40, "", 50, "", 60, ""];
@@ -106,23 +107,23 @@ const StackedBarChart: React.FC = () => {
       <p className="text-lg font-semibold font-sans mb-4">
         Contribution Overtime
       </p>
-        <div className="legends mb-2 flex flex-wrap gap-2 items-between justify-between ">
-          <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
-            <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
-            <p className="text-xs text-gray-500 font-semibold">Employer</p>
-            <p className="tracking-wide text-xs font-bold">K 73,500</p>
-          </div>
-          <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
-            <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
-            <p className="text-xs text-gray-500 font-semibold">Employee</p>
-            <p className="tracking-wide text-xs font-bold">K 23,480</p>
-          </div>
-          <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
-            <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
-            <p className="text-xs text-gray-500 font-semibold">Interest</p>
-            <p className="tracking-wide text-xs font-bold">$ 4,000</p>
-          </div>
+      <div className="legends mb-2 flex flex-wrap gap-2 items-between justify-between ">
+        <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
+          <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
+          <p className="text-xs text-gray-500 font-semibold">Employer</p>
+          <p className="tracking-wide text-xs font-bold">K 73,500</p>
         </div>
+        <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
+          <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
+          <p className="text-xs text-gray-500 font-semibold">Employee</p>
+          <p className="tracking-wide text-xs font-bold">K 23,480</p>
+        </div>
+        <div className="legend-item flex flex-col sm:flex-row sm:items-center gap-2 ">
+          <div className="w-3 h-2 bg-blue-500 rounded-full"></div>
+          <p className="text-xs text-gray-500 font-semibold">Interest</p>
+          <p className="tracking-wide text-xs font-bold">$ 4,000</p>
+        </div>
+      </div>
       <div className="bg-white rounded-lg shadow-lg">
         <div className="px-6 py-4 h-70 sm:h-[20rem] relative">
           {/* @ts-ignore */}

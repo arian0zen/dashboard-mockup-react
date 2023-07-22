@@ -30,7 +30,6 @@ const DonutChart = ({ changed }: DonutProps) => {
   const chartStyle = {
     width: "100px", // Adjust the size of the donut chart as needed
     height: "100px",
-    zIndex: 100,
     
   };
   const data1 = {
