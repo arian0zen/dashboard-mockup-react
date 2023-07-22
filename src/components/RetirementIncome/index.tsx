@@ -6,7 +6,7 @@ import DonutChart from "../UI/DonutCharts";
 type Props = {};
 
 let ages = ["Under 30", "Under 40", "Under 50"];
-let salaries = ["20k - 30k", "30k - 40k", "40k - 50k"];
+let salaries = ["30k", "40k", "50k"];
 let genders = ["Male", "Female", "Other"];
 
 const RetirementIncomeComponent = (props: Props) => {
@@ -15,7 +15,7 @@ const RetirementIncomeComponent = (props: Props) => {
   const [isShowGender, setIsShowGender] = React.useState(false);
   
   const [age, setAge] = React.useState("Under 30");
-  const [salary, setSalary] = React.useState("20k - 30k");
+  const [salary, setSalary] = React.useState("30k");
   const [gender, setGender] = React.useState("Male");
 
   const [changed, setChanged] = useState(false);
@@ -59,7 +59,7 @@ const RetirementIncomeComponent = (props: Props) => {
         <p className="text-xs text-gray-500 font-light">
           These numbers represents current goal achievements
         </p>
-        <div className="inputs-donut flex items-center justify-between mt-8 gap-4 sm:gap-2 flex-col sm:flex-row">
+        <div className="inputs-donut flex items-center justify-between mt-8 gap-4 sm:gap-2 flex-col sm:flex-row w-full">
           <div className="inputs flex flex-row sm:flex-col gap-2 w-full sm:w-fit">
             <div
               className="input1 flex gap-2 cursor-pointer relative"
@@ -67,10 +67,9 @@ const RetirementIncomeComponent = (props: Props) => {
                 setIsShowAges(!isShowAges);
               }}
             >
-              <p className="text-xs font-medium pb-2 border-b border-gray-300 flex gap-4">
+              <p className="text-xs font-medium pb-2 border-b border-gray-300 flex gap-2 truncate">
                 <span className="font-semibold">Age: </span>
                 <span className="text-gray-600">
-                  {" "}
                   {age} <AiOutlineDown size={10} className="inline-block" />
                 </span>
               </p>
@@ -103,7 +102,7 @@ const RetirementIncomeComponent = (props: Props) => {
                 setIsShowSalary(!isShowSalary);
               }}
             >
-              <p className="text-xs font-medium pb-2 border-b border-gray-300 flex gap-4">
+              <p className="text-xs font-medium pb-2 border-b border-gray-300 flex gap-2 truncate">
                 <span className="font-semibold">Salary: </span>
                 <span className="text-gray-600">
                   {" "}
@@ -139,7 +138,7 @@ const RetirementIncomeComponent = (props: Props) => {
                 setIsShowGender(!isShowGender);
               }}
             >
-              <p className="text-xs font-medium  flex gap-4 border-b border-gray-300">
+              <p className="text-xs font-medium  flex gap-2 border-b border-gray-300 truncate">
                 <span className="font-semibold">Gender: </span>
                 <span className="text-gray-600">
                   {" "}
